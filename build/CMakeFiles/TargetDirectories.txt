@@ -1,0 +1,3 @@
+/home/hamza/Repos/leetcode/visitor/build/CMakeFiles/pattern.dir
+/home/hamza/Repos/leetcode/visitor/build/CMakeFiles/edit_cache.dir
+/home/hamza/Repos/leetcode/visitor/build/CMakeFiles/rebuild_cache.dir
