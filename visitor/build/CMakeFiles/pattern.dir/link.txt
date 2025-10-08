@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/pattern.dir/src/pattern.cpp.o -o pattern 
