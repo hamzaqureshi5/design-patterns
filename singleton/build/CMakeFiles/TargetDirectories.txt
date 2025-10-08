@@ -1,3 +1,0 @@
-/home/hamza/Repos/leetcode/design-pattern/singleton/build/CMakeFiles/pattern.dir
-/home/hamza/Repos/leetcode/design-pattern/singleton/build/CMakeFiles/edit_cache.dir
-/home/hamza/Repos/leetcode/design-pattern/singleton/build/CMakeFiles/rebuild_cache.dir
