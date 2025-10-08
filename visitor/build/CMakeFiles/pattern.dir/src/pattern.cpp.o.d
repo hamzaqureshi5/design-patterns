@@ -1,5 +1,5 @@
-CMakeFiles/pattern.dir/src/main.cpp.o: \
- /home/hamza/Repos/leetcode/visitor/src/main.cpp \
+CMakeFiles/pattern.dir/src/pattern.cpp.o: \
+ /home/hamza/Repos/leetcode/design-pattern/visitor/src/pattern.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/13/iostream \
  /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \

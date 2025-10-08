@@ -1,4 +1,4 @@
-# Install script for directory: /home/hamza/Repos/leetcode/visitor
+# Install script for directory: /home/hamza/Repos/leetcode/design-pattern/visitor
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/hamza/Repos/leetcode/visitor/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/hamza/Repos/leetcode/design-pattern/visitor/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

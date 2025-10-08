@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/hamza/Repos/leetcode/visitor/include
+CXX_INCLUDES = -I/home/hamza/Repos/leetcode/design-pattern/visitor/include
 
 CXX_FLAGS = -std=gnu++17 -Wall -Wextra -Wno-unused-parameter -Wunused-variable -Wreturn-type -Wno-redundant-move -g
 

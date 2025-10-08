@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/pattern.dir/src/main.cpp.o -o pattern 
+/usr/bin/c++ CMakeFiles/pattern.dir/src/pattern.cpp.o -o pattern 

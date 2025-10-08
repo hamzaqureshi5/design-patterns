@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/hamza/Repos/leetcode/visitor/src/main.cpp" "CMakeFiles/pattern.dir/src/main.cpp.o" "gcc" "CMakeFiles/pattern.dir/src/main.cpp.o.d"
+  "/home/hamza/Repos/leetcode/design-pattern/visitor/src/pattern.cpp" "CMakeFiles/pattern.dir/src/pattern.cpp.o" "gcc" "CMakeFiles/pattern.dir/src/pattern.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

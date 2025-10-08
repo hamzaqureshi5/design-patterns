@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hamza/Repos/leetcode/visitor
+CMAKE_SOURCE_DIR = /home/hamza/Repos/leetcode/design-pattern/visitor
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hamza/Repos/leetcode/visitor/build
+CMAKE_BINARY_DIR = /home/hamza/Repos/leetcode/design-pattern/visitor/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hamza/Repos/leetcode/visitor/build/CMakeFiles /home/hamza/Repos/leetcode/visitor/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hamza/Repos/leetcode/design-pattern/visitor/build/CMakeFiles /home/hamza/Repos/leetcode/design-pattern/visitor/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hamza/Repos/leetcode/visitor/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hamza/Repos/leetcode/design-pattern/visitor/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,29 +129,29 @@ pattern/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pattern.dir/build.make CMakeFiles/pattern.dir/build
 .PHONY : pattern/fast
 
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
+src/pattern.o: src/pattern.cpp.o
+.PHONY : src/pattern.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pattern.dir/build.make CMakeFiles/pattern.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+src/pattern.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pattern.dir/build.make CMakeFiles/pattern.dir/src/pattern.cpp.o
+.PHONY : src/pattern.cpp.o
 
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
+src/pattern.i: src/pattern.cpp.i
+.PHONY : src/pattern.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pattern.dir/build.make CMakeFiles/pattern.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+src/pattern.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pattern.dir/build.make CMakeFiles/pattern.dir/src/pattern.cpp.i
+.PHONY : src/pattern.cpp.i
 
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
+src/pattern.s: src/pattern.cpp.s
+.PHONY : src/pattern.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pattern.dir/build.make CMakeFiles/pattern.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+src/pattern.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pattern.dir/build.make CMakeFiles/pattern.dir/src/pattern.cpp.s
+.PHONY : src/pattern.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... pattern"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... src/pattern.o"
+	@echo "... src/pattern.i"
+	@echo "... src/pattern.s"
 .PHONY : help
 
 
