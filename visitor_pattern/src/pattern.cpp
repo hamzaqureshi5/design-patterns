@@ -123,23 +123,25 @@ public:
   }
 };
 
+
+
 // --------------------------------------------
 // Main
 // --------------------------------------------
-int main() {
-  // Represents: (3 + 4) * 5
-  auto expr = std::make_unique<MulExpr>(
-      new AddExpr(new NumberExpr(3), new NumberExpr(4)),
-      new DivExpr(new NumberExpr(15), new NumberExpr(5)));
+// int main() {
+//   // Represents: (3 + 4) * 5
+//   auto expr = std::make_unique<MulExpr>(
+//       new AddExpr(new NumberExpr(3), new NumberExpr(4)),
+//       new DivExpr(new NumberExpr(15), new NumberExpr(5)));
 
-  PrintVisitor printer;
-  EvalVisitor evaluator;
+//   PrintVisitor printer;
+//   EvalVisitor evaluator;
 
-  expr->accept(&printer);
-  expr->accept(&evaluator);
+//   expr->accept(&printer);
+//   expr->accept(&evaluator);
 
-  std::cout << "Expression: " << printer.result << std::endl;
-  std::cout << "Value: " << evaluator.result << std::endl;
+//   std::cout << "Expression: " << printer.result << std::endl;
+//   std::cout << "Value: " << evaluator.result << std::endl;
 
-  return 0;
-}
+//   return 0;
+// }
