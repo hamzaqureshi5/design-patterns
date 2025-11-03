@@ -21,22 +21,21 @@
 //   return 0;
 // }
 
-
-#include "ir_module.h"
 #include "expr_visitor.h"
+#include "ir_module.h"
 
 int main() {
-    Expr ast =
-        BinaryExpr(
-            '+',
-            NumberExpr(10),
-            BinaryExpr('*', NumberExpr(2), NumberExpr(3))
-        );
+  Expr ast1 = BinaryExpr('+', NumberExpr(10),
+                         BinaryExpr('*', NumberExpr(2), NumberExpr(3)));
+  Expr ast2 = BinaryExpr('+', NumberExpr(10),
+                         BinaryExpr('/', NumberExpr(2), NumberExpr(3)));
 
-    IRModule mod(ast);
+  Expr f = BinaryExpr('+', ast1, ast2);
 
-    ExprVisitor visitor;
-    visitor.VisitExpr(mod->body);
+  IRModule mod(f);
 
-    return 0;
+  ExprVisitor visitor;
+  visitor.VisitExpr(mod->body);
+
+  return 0;
 }
