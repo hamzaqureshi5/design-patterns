@@ -121,3 +121,75 @@
 // inline StmtPtr MakeSeq(std::vector<StmtPtr> s) { return std::make_shared<SeqNode>(std::move(s)); }
 // inline StmtPtr MakeIf(ExprPtr c, StmtPtr t, StmtPtr e = nullptr) { return std::make_shared<IfNode>(c, t, e); }
 // inline StmtPtr MakeFor(const std::string& v, ExprPtr b, ExprPtr e, StmtPtr body) { return std::make_shared<ForNode>(v, b, e, body); }
+#pragma once
+#include <iostream>
+#include <memory>
+#include <string>
+#include <unordered_map>
+#include <vector>
+#include "object.h"
+// ====== Expr Base ======
+struct BaseExprNode : Object {
+  virtual void print() const = 0;
+  virtual double eval(std::unordered_map<std::string, double> &env) const = 0;
+};
+
+struct Expr : ObjectRef {
+  Expr() = default;
+  explicit Expr(ObjectPtr<BaseExprNode> n) : ObjectRef(std::move(n)) {}
+  BaseExprNode *get() const { return static_cast<BaseExprNode *>(data.get()); }
+
+  void print() const { get()->print(); }
+  double eval(std::unordered_map<std::string, double> &env) const {
+    return get()->eval(env);
+  }
+};
+
+
+// ====== Expr Implementations ======
+struct IntImmNode : BaseExprNode {
+  double value;
+  explicit IntImmNode(double v) : value(v) {}
+  void print() const override { std::cout << value; }
+  double eval(std::unordered_map<std::string, double> &) const override {
+    return value;
+  }
+};
+
+struct VarNode : BaseExprNode {
+  std::string name;
+  explicit VarNode(std::string n) : name(std::move(n)) {}
+  void print() const override { std::cout << name; }
+  double eval(std::unordered_map<std::string, double> &env) const override {
+    if (!env.count(name))
+      throw std::runtime_error("Undefined var: " + name);
+    return env[name];
+  }
+};
+
+struct BinaryOpNode : BaseExprNode {
+  std::string op;
+  Expr a, b;
+  BinaryOpNode(std::string o, Expr l, Expr r)
+      : op(std::move(o)), a(std::move(l)), b(std::move(r)) {}
+  void print() const override {
+    std::cout << "(";
+    a.print();
+    std::cout << " " << op << " ";
+    b.print();
+    std::cout << ")";
+  }
+  double eval(std::unordered_map<std::string, double> &env) const override {
+    double x = a.eval(env), y = b.eval(env);
+    if (op == "+")
+      return x + y;
+    if (op == "-")
+      return x - y;
+    if (op == "*")
+      return x * y;
+    if (op == "/")
+      return y != 0 ? x / y : 0;
+    throw std::runtime_error("Unknown op");
+  }
+};
+

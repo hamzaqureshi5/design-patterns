@@ -51,3 +51,23 @@
 //   explicit ObjectRef(T *node) : data(node) {}
 //   T *operator->() const { return data.ptr; }
 // };
+#pragma once
+#include <iostream>
+#include <memory>
+#include <string>
+#include <unordered_map>
+#include <vector>
+
+// ====== Core Object System (TVM style) ======
+struct Object {
+    virtual ~Object() = default;
+};
+
+template <typename T>
+using ObjectPtr = std::shared_ptr<T>;
+
+struct ObjectRef {
+    ObjectPtr<Object> data;
+    ObjectRef() = default;
+    explicit ObjectRef(ObjectPtr<Object> n) : data(std::move(n)) {}
+};
