@@ -40,6 +40,12 @@ struct DivNode : BinaryNode {
 
 // Helper constructors for convenience
 inline ExprPtr MakeNumber(int v) { return std::make_shared<NumberNode>(v); }
-inline ExprPtr MakeAdd(ExprPtr l, ExprPtr r) { return std::make_shared<AddNode>(std::move(l), std::move(r)); }
-inline ExprPtr MakeMul(ExprPtr l, ExprPtr r) { return std::make_shared<MulNode>(std::move(l), std::move(r)); }
-inline ExprPtr MakeDiv(ExprPtr l, ExprPtr r) { return std::make_shared<DivNode>(std::move(l), std::move(r)); }
+inline ExprPtr MakeAdd(ExprPtr l, ExprPtr r) {
+  return std::make_shared<AddNode>(std::move(l), std::move(r));
+}
+inline ExprPtr MakeMul(ExprPtr l, ExprPtr r) {
+  return std::make_shared<MulNode>(std::move(l), std::move(r));
+}
+inline ExprPtr MakeDiv(ExprPtr l, ExprPtr r) {
+  return std::make_shared<DivNode>(std::move(l), std::move(r));
+}

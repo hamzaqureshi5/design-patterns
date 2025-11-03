@@ -4,16 +4,13 @@
 
 class ExprNode : public Object {
 public:
-    virtual ~ExprNode() = default;
+  virtual ~ExprNode() = default;
 };
 
 class Expr : public ObjectRef<ExprNode> {
 public:
-    using ObjectRef<ExprNode>::ObjectRef;
+  using ObjectRef<ExprNode>::ObjectRef;
 };
-
-
-
 
 class NumberExprNode : public ExprNode {
 public:
